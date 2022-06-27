@@ -8,7 +8,7 @@ let pokemonRepository = (function () {
     },
     {
       name: 'Haunter', 
-      height: 1.6, 
+      height: .6, 
       type: ['Ghost','Poison']
     },
     {
@@ -37,6 +37,6 @@ pokemonRepository.add({ name: 'Pikachu' });
 console.log(pokemonRepository.getAll()); 
 
 
-pokemonList.forEach(function(pokemon) {
+pokemonRepository.getAll().forEach(function(pokemon) {
   console.log(pokemon.name + ' ' + pokemon.height);
 });
