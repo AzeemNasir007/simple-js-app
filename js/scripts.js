@@ -19,7 +19,7 @@ let pokemonRepository = (function () {
     button.classList.add("button-class");
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
-    button.addEventListener("click", function (event) {
+    button.addEventListener("click", function () {
       showDetails(pokemon);
     });
   }
@@ -56,14 +56,14 @@ let pokemonRepository = (function () {
 
   function showDetails(item) {
     pokemonRepository.loadDetails(item).then(function () {
-      console.log(item);
+      showModal(item);
     });
   }
 
   
   let modalContainer = document.querySelector('#modal-container');
 
-  function showModal(title, text) {
+  function showModal(item) {
     modalContainer.innerHTML = '';
     let modal = document.createElement('div');
     modal.classList.add('modal');
@@ -75,10 +75,10 @@ let pokemonRepository = (function () {
     closeButtonElement.addEventListener('click', hideModal);
 
     let titleElement = document.createElement('h1');
-    titleElement.innerText = title;
+    titleElement.innerText = item.name;
 
     let contentElement = document.createElement('p');
-    contentElement.innerText = text;
+    contentElement.innerText = item.height;
 
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
@@ -112,6 +112,18 @@ let pokemonRepository = (function () {
   document.querySelector('#show-modal').addEventListener('click', () => { 
     showModal('Modal title', 'This is the modal content!');
   });
+
+  let container = document.querySelector('#image-container');
+
+  // Create an <img> element
+  let myImage = document.createElement('img');
+
+  // setting 'src' property to set the actual element's 'src' attribute
+  // this also works on <img> elements selected by querySelector() method, it is not specific for <img> elements created with createElement() methods
+  myImage.src = '';
+
+  container.appendChild(myImage);
+
 
   return {
     getAll: getAll,
