@@ -1,6 +1,7 @@
 html, 
 body {
   font-family: Arial, sans-serif;
+  font-size: 1.3em;
 }
 
 
@@ -12,15 +13,23 @@ body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 18px;
+  margin: 0px;
   -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;
   cursor: pointer;
-  background-color: white;
+  background-color: lightsalmon;
   color: black;
-  border: 2px solid darkgreen;
+  border: 2px dotted salmon;
+  width: 300px;
+  height: 65px;
+  text-transform: uppercase;
 }
+
+.button-class:hover {
+  background-color: salmon;
+}
+
 
 #modal-container {
   position: fixed;
@@ -66,10 +75,15 @@ body {
 
 .modal h1 {
   margin-top: 0;
+  text-transform: uppercase;
 }
 
 .modal p {
   margin-bottom: 0;
+}
+
+.modal img {
+  margin: center;
 }
 
 #modal-container {
@@ -86,7 +100,6 @@ body {
   list-style: none;
 }
 
-h1 {
+body h1{
   text-align: center;
 }
-
