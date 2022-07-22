@@ -80,9 +80,13 @@ let pokemonRepository = (function () {
     let contentElement = document.createElement('p');
     contentElement.innerText = item.height;
 
+    let image = document.createElement('img');
+    image.src = item.imageUrl;
+
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
     modal.appendChild(contentElement);
+    modal.appendChild(image);
     modalContainer.appendChild(modal);
 
     modalContainer.classList.add('is-visible');
@@ -108,22 +112,6 @@ let pokemonRepository = (function () {
       hideModal();
     }
   });
-
-  document.querySelector('#show-modal').addEventListener('click', () => { 
-    showModal('Modal title', 'This is the modal content!');
-  });
-
-  let container = document.querySelector('#image-container');
-
-  // Create an <img> element
-  let myImage = document.createElement('img');
-
-  // setting 'src' property to set the actual element's 'src' attribute
-  // this also works on <img> elements selected by querySelector() method, it is not specific for <img> elements created with createElement() methods
-  myImage.src = '';
-
-  container.appendChild(myImage);
-
 
   return {
     getAll: getAll,
