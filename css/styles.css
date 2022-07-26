@@ -13,7 +13,7 @@ body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 18px;
+  font-size: 18 px;
   margin: 0px;
   -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;
@@ -102,4 +102,11 @@ body {
 
 body h1{
   text-align: center;
+}
+
+.pokemon-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
