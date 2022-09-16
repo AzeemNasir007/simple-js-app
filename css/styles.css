@@ -2,9 +2,7 @@
 .page-container {
   margin-top: 60px;
 }
-.navbar-brand {
-  font-family: "monaco"
-}
+
 
 body {
   background-color: lightgrey;
@@ -14,3 +12,6 @@ body {
   background-color: white;
 }
 
+ul {
+  margin: 105px 0 0 0;
+}
