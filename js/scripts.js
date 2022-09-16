@@ -21,7 +21,7 @@ let pokemonRepository = (function () {
     button.classList.add("button-class");
     button.setAttribute("data-toggle", "modal");
     button.setAttribute("data-target", "#pokemon-modal");
-    $(button).addClass('button-class btn-block btn m1');
+    $(button).addClass('button-class btn-block');
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
     button.addEventListener("click", function () {
