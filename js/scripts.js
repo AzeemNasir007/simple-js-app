@@ -100,7 +100,7 @@ let pokemonRepository = (function () {
 
      // creating element for abilities in modal content
      
-    let abilitiesElement = $("<p>" + "abilities : </p>");
+    let abilitiesElement = $("<p>" + "abilities : " + item.abilities + "</p>");
     modalBody.append(abilitiesElement);
     item.abilities.forEach((ability) => {
       let abilitiesElement = $("<p>" + ability.ability.name + "</p>");
