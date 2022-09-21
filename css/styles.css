@@ -1,14 +1,10 @@
-/* navbar */
-.page-container {
-  margin-top: 60px;
-}
-
-
-
 .button-class:hover {
   background-color: white;
+  cursor: pointer;
 }
 
-ul {
-  margin: 105px 0 0 0;
+.list-group {
+  font-size: 22px;
+  margin-top: 104px;
 }
+
