@@ -91,19 +91,16 @@ let pokemonRepository = (function () {
     modalBody.append(weightElement);
      
     // creating element for type in modal content
-    let typesElement = $("<p>" + "types : " + item.types + "</p>");
-    modalBody.append(typesElement)
+
     item.types.forEach((type) => {
-      let typesElement = $("<p>" + type.type.name + "</p>");
+      let typesElement = $("<p>" + "types: " + type.type.name + "</p>");
       modalBody.append(typesElement);
     })
+      
 
      // creating element for abilities in modal content
-     
-    let abilitiesElement = $("<p>" + "abilities : " + item.abilities + "</p>");
-    modalBody.append(abilitiesElement);
     item.abilities.forEach((ability) => {
-      let abilitiesElement = $("<p>" + ability.ability.name + "</p>");
+      let abilitiesElement = $("<p>" + "abilities: " + ability.ability.name + "</p>");
       modalBody.append(abilitiesElement);
     })
   }
