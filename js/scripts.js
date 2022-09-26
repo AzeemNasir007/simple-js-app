@@ -55,7 +55,6 @@ let pokemonRepository = (function () {
       item.height = details.height;
       item.weight = details.weight;
       item.types = details.types;
-      item.abilities = details.abilities;
     }).catch(function (e) {
       console.error(e);
     });
@@ -91,20 +90,22 @@ let pokemonRepository = (function () {
     modalBody.append(weightElement);
      
     // creating element for type in modal content
+    let abilitiesElement = '<p>'
+    item.types.forEach((type, index) => {
+      if (abilitiesElement.length === 3) {
+        abilitiesElement += 'types: '
+      }
+      abilitiesElement += `${type.type.name}`
 
-    item.types.forEach((type) => {
-      let typesElement = $("<p>" + "types: " + type.type.name + "</p>");
-      modalBody.append(typesElement);
+      if (index < item.types.length - 1) {
+        abilitiesElement += ', '
+      }
     })
-      
-
-     // creating element for abilities in modal content
-    item.abilities.forEach((ability) => {
-      let abilitiesElement = $("<p>" + "abilities: " + ability.ability.name + "</p>");
-      modalBody.append(abilitiesElement);
-    })
+    abilitiesElement += '</p>'
+    let typesElement = $(abilitiesElement);
+    modalBody.append(typesElement);
   }
-  
+    
 
   return {
     getAll: getAll,
